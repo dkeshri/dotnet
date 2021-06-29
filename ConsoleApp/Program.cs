@@ -1,4 +1,5 @@
 ﻿using System;
+using DesignPrincipal.Basic.Abstract;
 
 namespace ConsoleApp
 {
@@ -7,6 +8,9 @@ namespace ConsoleApp
         static void Main(string[] args)
         {
             Console.WriteLine("Deepak hello ");
+            AbstractClassHandler abstractClassHandler = new AbstractClassHandler();
+            abstractClassHandler.run();
+            Console.ReadLine();
         }
     }
 }
