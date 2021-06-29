@@ -1,2 +1,8 @@
+# console Application.
 /ConsoleApp/obj
 /ConsoleApp/bin
+
+#webApi
+
+/webapi/obj
+/webapi/bin
