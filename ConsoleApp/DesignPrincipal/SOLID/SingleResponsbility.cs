@@ -1,5 +1,6 @@
 namespace DesignPrincipal.SOLID{
     
+    
     // Single responsibility principal.
 
 
