@@ -8,6 +8,13 @@ namespace DesignPrincipal.SOLID{
         //this Inteface Represent Open for modification/Extension.
         public double Area();
     }
+    public class CalculateArea{
+        // Close for Modification.
+        public double calculateArea(IShape shape){
+            return shape.Area();
+        }
+
+    }
     public class Circle : IShape
     {
         // here we are Extending the Interface.
@@ -34,13 +41,8 @@ namespace DesignPrincipal.SOLID{
             return length*breadth;
         }
     }
-    public class CalculateArea{
-        // Close for Modification.
-        public double calculateArea(IShape shape){
-            return shape.Area();
-        }
-
-    }
+    
+    
 
     // here I am calling the Area of different Shape. You can Call it in Main Function.
 
@@ -56,6 +58,7 @@ namespace DesignPrincipal.SOLID{
             Rectangle rectangle = new Rectangle(5,6);
             Console.WriteLine("Area of rectangle having len=5 and breadth=6 is: "+calculateArea.calculateArea(rectangle));
 
+            
         }
     }
 
