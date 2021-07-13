@@ -12,10 +12,13 @@ namespace ConsoleApp
             // OpenClosePrincipal openClosePrincipal = new OpenClosePrincipal();
             // openClosePrincipal.run();
 
-            ExecuteAreaClass executeAreaClass = new ExecuteAreaClass();
-            executeAreaClass.run();
+            // ExecuteAreaClass executeAreaClass = new ExecuteAreaClass();
+            // executeAreaClass.run();
 
-            Console.ReadLine();
+            LiskovPrincipalDemo liskovPrincipalDemo = new LiskovPrincipalDemo();
+            liskovPrincipalDemo.run();
+
+            //Console.ReadLine();
         }
     }
 }

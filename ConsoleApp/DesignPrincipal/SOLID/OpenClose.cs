@@ -41,8 +41,21 @@ namespace DesignPrincipal.SOLID{
             return length*breadth;
         }
     }
-    
-    
+    public class Triangle : IShape
+    {
+        double baselen;
+        double height;
+        public Triangle(double baselen,double height){
+            this.baselen = baselen;
+            this.height = height;
+        }
+        public double Area()
+        {
+            return (baselen*height)/2;
+        }
+    }
+
+
 
     // here I am calling the Area of different Shape. You can Call it in Main Function.
 
@@ -58,6 +71,8 @@ namespace DesignPrincipal.SOLID{
             Rectangle rectangle = new Rectangle(5,6);
             Console.WriteLine("Area of rectangle having len=5 and breadth=6 is: "+calculateArea.calculateArea(rectangle));
 
+            Triangle triangle =  new Triangle(5,41);
+            Console.WriteLine("Area of triangle is :"+ calculateArea.calculateArea(triangle));
             
         }
     }
