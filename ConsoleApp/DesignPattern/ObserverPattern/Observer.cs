@@ -16,7 +16,7 @@ namespace DesignPattern{
         public void update(IObservee observee)
         {
             if(observee is GareebDeveloper gareebDeveloper){
-                Console.Write("Subscriber: "+this.Name+" is notified that Video is Uploaded: => ");
+                Console.Write(this.Name+" is notified that Video is Uploaded: => ");
                 Console.WriteLine(gareebDeveloper.UploadVideo);
             }
         }
@@ -30,7 +30,7 @@ namespace DesignPattern{
         public void update(IObservee observee)
         {
             if(observee is GareebDeveloper gareebDeveloper){
-                Console.Write("Subscriber: "+this.Name+" is notified that Video is Uploaded: => ");
+                Console.Write(this.Name+" is notified that Video is Uploaded: => ");
                 Console.WriteLine(gareebDeveloper.UploadVideo);
             }
         }
