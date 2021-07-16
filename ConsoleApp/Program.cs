@@ -1,4 +1,5 @@
 ﻿using System;
+using DesignPattern;
 using DesignPrincipal.Basic.Abstract;
 using DesignPrincipal.SOLID;
 using Temp;
@@ -9,16 +10,7 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            // OpenClosePrincipal openClosePrincipal = new OpenClosePrincipal();
-            // openClosePrincipal.run();
-
-            // ExecuteAreaClass executeAreaClass = new ExecuteAreaClass();
-            // executeAreaClass.run();
-
-            LiskovPrincipalDemo liskovPrincipalDemo = new LiskovPrincipalDemo();
-            liskovPrincipalDemo.run();
-
-            //Console.ReadLine();
+            new ObserverPatternDemo().run();
         }
     }
 }
