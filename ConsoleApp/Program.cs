@@ -10,7 +10,8 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            new ObserverPatternDemo().run();
+            //new ISPTempDemo().run();
+            new ISPDemo().run();
         }
     }
 }
