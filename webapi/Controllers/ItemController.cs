@@ -3,6 +3,8 @@ using Webapi.Repositories;
 using System.Collections.Generic;
 using Webapi.Entities;
 using System;
+using System.Linq;
+using Webapi.Dtos;
 
 namespace Webapi.Controllers
 {
@@ -19,19 +21,21 @@ namespace Webapi.Controllers
 
         // Get /items
         [HttpGet]
-        public IEnumerable<Item> GetItems()
+        public IEnumerable<ItemDto> GetItems()
         {
-            var items = repository.GetItems();
+            var items = repository.GetItems().Select(item => item.AsDto());
             return items;
         }
         // Get /items/{id}
         [HttpGet("{id}")]
-        public ActionResult<Item> GetItem(Guid id){
+        public ActionResult<ItemDto> GetItem(Guid id)
+        {
             var item = repository.GetItem(id);
-            if(item is null){
+            if (item is null)
+            {
                 return NotFound();
             }
-            return item;
+            return item.AsDto();
         }
 
     }
