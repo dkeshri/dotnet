@@ -11,7 +11,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using MongoDB.Driver;
 using Webapi.Repositories;
+using Webapi.Settings;
 
 namespace webapi
 {
@@ -27,8 +29,19 @@ namespace webapi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSingleton<IMongoClient>(serviceProvider =>
+            {
+                var settings = Configuration.GetSection(nameof(MongoDbSettings)).Get<MongoDbSettings>();
+                return new MongoClient(settings.ConnectionString);
+            });
 
-            services.AddSingleton<IItemsRepository,InMemItemRepositories>();
+            // this is for Item in memory
+            services.AddSingleton<IItemsRepository, InMemItemRepositories>();
+            // this is for Item Store in Mongo DB. database. 
+            //services.AddSingleton<IItemsRepository, MongoDbItemsRepository>();
+
+            // Note: use one of them not both at a time . either InMemItemRepositories or MongoDbItemsRepository
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
