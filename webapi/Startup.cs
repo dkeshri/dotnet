@@ -41,9 +41,9 @@ namespace webapi
             });
 
             // this is for Item in memory
-            //services.AddSingleton<IItemsRepository, InMemItemRepositories>();
+            services.AddSingleton<IItemsRepository, InMemItemRepositories>();
             // this is for Item Store in Mongo DB. database. 
-            services.AddSingleton<IItemsRepository, MongoDbItemsRepository>();
+            //services.AddSingleton<IItemsRepository, MongoDbItemsRepository>();
 
             // Note: use one of them not both at a time . either InMemItemRepositories or MongoDbItemsRepository
 
