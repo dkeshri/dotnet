@@ -1,4 +1,5 @@
 ﻿using System;
+using ConsoleApp.Basic;
 using DesignPattern;
 using DesignPrincipal.Basic.Abstract;
 using DesignPrincipal.SOLID;
@@ -11,7 +12,8 @@ namespace ConsoleApp
         static void Main(string[] args)
         {
             //new ISPTempDemo().run();
-            new ISPDemo().run();
+            //new DelegateEx().run();
+           new EventAndDelegateEx().run();
         }
     }
 }
