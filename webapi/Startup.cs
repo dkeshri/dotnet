@@ -15,10 +15,11 @@ using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
 using MongoDB.Bson.Serialization.Serializers;
 using MongoDB.Driver;
+using Webapi.Extensions;
 using Webapi.Repositories;
 using Webapi.Settings;
 
-namespace webapi
+namespace Webapi
 {
     public class Startup
     {
@@ -57,13 +58,13 @@ namespace webapi
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "webapi v1"));
             }
-
+            app.ConfigureExceptionHandler(env);
             app.UseHttpsRedirection();
 
             app.UseRouting();

@@ -8,19 +8,19 @@
     "net5.0": []
   },
   "packageFolders": {
-    "/home/deepak/.nuget/packages/": {}
+    "C:\\Users\\deepakkeshri\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/deepak/Deepak_keshri/Projects/dotnet/ConsoleApp/ConsoleApp.csproj",
+      "projectUniqueName": "D:\\Deepak_keshri\\ProjectLearn\\dotnet\\ConsoleApp\\ConsoleApp.csproj",
       "projectName": "ConsoleApp",
-      "projectPath": "/home/deepak/Deepak_keshri/Projects/dotnet/ConsoleApp/ConsoleApp.csproj",
-      "packagesPath": "/home/deepak/.nuget/packages/",
-      "outputPath": "/home/deepak/Deepak_keshri/Projects/dotnet/ConsoleApp/obj/",
+      "projectPath": "D:\\Deepak_keshri\\ProjectLearn\\dotnet\\ConsoleApp\\ConsoleApp.csproj",
+      "packagesPath": "C:\\Users\\deepakkeshri\\.nuget\\packages\\",
+      "outputPath": "D:\\Deepak_keshri\\ProjectLearn\\dotnet\\ConsoleApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/deepak/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\deepakkeshri\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -58,7 +58,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.302/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

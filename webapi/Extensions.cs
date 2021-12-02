@@ -3,7 +3,7 @@ using Webapi.Entities;
 
 namespace Webapi
 {
-    public static class Extensions
+    public static class ItemExtensions
     {
         public static ItemDto AsDto(this Item item)
         {
