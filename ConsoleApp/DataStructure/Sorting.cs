@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using DesignPrincipal.Basic.Interface;
 
 namespace ConsoleApp.DataStructure{
@@ -27,6 +29,32 @@ namespace ConsoleApp.DataStructure{
             }
         }
         public static void InsertionSort(this int[] array){
+
+        }
+        public static void CustomSort(this int[] arr)
+        {
+            //int[] a = new int[] { 3, 1, 3, 2, 1, 3, 2, 1 };
+
+            // array always have number 1 to 3.
+
+            // this algorithms made in interview.
+            Dictionary<int, int> d = new Dictionary<int, int>();
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (d.ContainsKey(arr[i]))
+                    d[arr[i]]++;
+                else
+                    d.Add(arr[i], 1);
+            }
+
+            for (int i = 1; i <= 3; i++)
+            {
+                if (d.ContainsKey(i))
+                    for (int j = 1; j <= d[i]; j++)
+                        Console.Write(i + " ");
+
+            }
 
         }
     }

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 using ConsoleApp.Basic;
 using ConsoleApp.DataStructure;
 using DesignPattern;
@@ -12,11 +14,11 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            //new ISPTempDemo().run();
-            //new DelegateEx().run();
-           //new EventAndDelegateEx().run();
-           //new SortingEx().run();
-           new SearchingEx().run();
+            int[] a = new int[] { 3, 1, 3, 2, 1, 3, 2, 1 };
+            a.CustomSort();
+
+
+
         }
     }
 }
