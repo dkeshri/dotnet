@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using MongoDB.Bson;
 using MongoDB.Driver;
 using Webapi.Entities;
@@ -23,7 +24,17 @@ namespace Webapi.Repositories
             itemsCollection.InsertOne(item);
         }
 
+        public Task CreateItemAsync(Item item)
+        {
+            throw new NotImplementedException();
+        }
+
         public void DeleteItem(Guid id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task DeleteItemAsync(Guid id)
         {
             throw new NotImplementedException();
         }
@@ -34,12 +45,27 @@ namespace Webapi.Repositories
             return itemsCollection.Find(filter).SingleOrDefault();
         }
 
+        public Task<Item> GetItemAsync(Guid id)
+        {
+            throw new NotImplementedException();
+        }
+
         public IEnumerable<Item> GetItems()
         {
             return itemsCollection.Find(new BsonDocument()).ToList();
         }
 
+        public Task<IEnumerable<Item>> GetItemsAsync()
+        {
+            throw new NotImplementedException();
+        }
+
         public void UpdateItem(Item item)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task UpdateItemAsync(Item item)
         {
             throw new NotImplementedException();
         }

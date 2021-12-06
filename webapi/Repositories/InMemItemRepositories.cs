@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Webapi.Entities;
 
 namespace Webapi.Repositories
@@ -43,6 +44,51 @@ namespace Webapi.Repositories
 
             var index = items.FindIndex(existingItem => existingItem.Id == id);
             items.RemoveAt(index);
+        }
+        public async Task<Item> GetItemAsync(Guid id)
+        {
+            return await Task.Run(() =>
+            {
+                return items.Where(item => item.Id == id).SingleOrDefault();
+            });
+        }
+
+        public async Task<IEnumerable<Item>> GetItemsAsync()
+        {
+            return await Task.Run(() =>
+            {
+                return items;
+            });
+        }
+
+        public async Task CreateItemAsync(Item item)
+        {
+            await Task.Run(() =>
+            {
+                if (item is not null)
+                    items.Add(item);
+            });
+        }
+
+        public async Task UpdateItemAsync(Item item)
+        {
+            await Task.Run(() =>
+            {
+                if (item is not null)
+                {
+                    var index = items.FindIndex(existingItem => existingItem.Id == item.Id);
+                    items[index] = item;
+                }
+            });
+        }
+
+        public async Task DeleteItemAsync(Guid id)
+        {
+            await Task.Run(() =>
+            {
+                var index = items.FindIndex(existingItem => existingItem.Id == id);
+                items.RemoveAt(index);
+            });
         }
     }
 
