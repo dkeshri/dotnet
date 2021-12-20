@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using ConsoleApp.Basic.Generic;
+using ConsoleApp.Basic.Linq;
+using ConsoleApp.Programming;
 using Newtonsoft.Json;
 
 namespace ConsoleApp
@@ -54,25 +56,7 @@ namespace ConsoleApp
         }
         static void Main(string[] args)
         {
-
-            // string[] s = new string[] { "Deepak", "kumar", "keshri" };
-            // List<string> m = new List<string>(){
-            //     "Pk",
-            //     "kumst",
-            //     "jkjk"
-            // };
-            // string a = JsonConvert.SerializeObject(s);
-            // Console.WriteLine(a);
-            // string[] co = JsonConvert.DeserializeObject<string[]>(a);
-            
-            // // List<string> listOfString = saperateStringbyComma(combineListOfString(s));
-            // foreach (string str in co)
-            // {
-            //     Console.WriteLine(str);
-            // }
-
-            new GenericEx().run();
-
+            new ProgramEx().run();
         }
     }
 }
