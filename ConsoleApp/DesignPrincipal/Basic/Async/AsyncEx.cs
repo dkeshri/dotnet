@@ -37,6 +37,14 @@ namespace ConsoleApp.Basic.Async
             websiteDataModel.Data = client.DownloadString(url);
             return websiteDataModel;
         }
+        private async Task<WebsiteDataModel> DownloadWebsiteAsync(string url)
+        {
+            WebsiteDataModel websiteDataModel = new WebsiteDataModel();
+            WebClient client = new WebClient();
+            websiteDataModel.Url = url;
+            websiteDataModel.Data = await client.DownloadStringTaskAsync(url);
+            return websiteDataModel;
+        }
         private void runDownload()
         {
             List<string> websites = ListOfWebsite();
@@ -61,7 +69,8 @@ namespace ConsoleApp.Basic.Async
             List<Task<WebsiteDataModel>> tasks = new List<Task<WebsiteDataModel>>();
             foreach (string url in websites)
             {
-                tasks.Add(Task.Run(() => DownloadWebsite(url)));
+                //tasks.Add(Task.Run(() => DownloadWebsite(url)));
+                tasks.Add(Task.Run(() => DownloadWebsiteAsync(url)));
             }
             WebsiteDataModel[] Results = await Task.WhenAll(tasks);
             foreach (WebsiteDataModel websiteDataModel in Results)
