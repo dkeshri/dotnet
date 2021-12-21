@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using ConsoleApp.Basic.Async;
 using ConsoleApp.Basic.Generic;
 using ConsoleApp.Basic.Linq;
 using ConsoleApp.Programming;
@@ -56,7 +57,8 @@ namespace ConsoleApp
         }
         static void Main(string[] args)
         {
-            new ProgramEx().run();
+            AsyncEx asyncEx = new AsyncEx();
+            asyncEx.run();
         }
     }
 }
