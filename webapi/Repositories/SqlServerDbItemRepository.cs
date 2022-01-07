@@ -70,9 +70,11 @@ namespace Webapi.Repositories
             }
         }
 
-        public Task CreateItemAsync(Item item)
+        public async Task CreateItemAsync(Item item)
         {
-            throw new NotImplementedException();
+            await Task.Run(()=>{
+                CreateItem(item);
+            });
         }
 
         public void DeleteItem(Guid id)
@@ -108,9 +110,12 @@ namespace Webapi.Repositories
                 }
         }
 
-        public Task DeleteItemAsync(Guid id)
+        public async Task DeleteItemAsync(Guid id)
         {
-            throw new NotImplementedException();
+            await Task.Run(() =>
+            {
+                DeleteItem(id);
+            });
         }
 
         public Item GetItem(Guid id)
@@ -164,9 +169,12 @@ namespace Webapi.Repositories
             return ReturnItem;
         }
 
-        public Task<Item> GetItemAsync(Guid id)
+        public async Task<Item> GetItemAsync(Guid id)
         {
-            throw new NotImplementedException();
+            return await Task.Run(() =>
+            {
+                return GetItem(id);
+            });
         }
 
         public IEnumerable<Item> GetItems()
@@ -220,9 +228,12 @@ namespace Webapi.Repositories
             return items;
         }
 
-        public Task<IEnumerable<Item>> GetItemsAsync()
+        public async Task<IEnumerable<Item>> GetItemsAsync()
         {
-            throw new NotImplementedException();
+            return await Task.Run(() =>
+            {
+                return GetItems();
+            });
         }
 
         public void UpdateItem(Item item)
@@ -274,9 +285,12 @@ namespace Webapi.Repositories
             }
         }
 
-        public Task UpdateItemAsync(Item item)
+        public async Task UpdateItemAsync(Item item)
         {
-            throw new NotImplementedException();
+            await Task.Run(() =>
+            {
+                UpdateItem(item);
+            });
         }
     }
 }

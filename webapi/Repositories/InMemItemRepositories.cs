@@ -49,7 +49,7 @@ namespace Webapi.Repositories
         {
             return await Task.Run(() =>
             {
-                return items.Where(item => item.Id == id).SingleOrDefault();
+                return GetItem(id);
             });
         }
 
@@ -57,7 +57,7 @@ namespace Webapi.Repositories
         {
             return await Task.Run(() =>
             {
-                return items;
+                return GetItems();
             });
         }
 
@@ -65,8 +65,7 @@ namespace Webapi.Repositories
         {
             await Task.Run(() =>
             {
-                if (item is not null)
-                    items.Add(item);
+                CreateItem(item);
             });
         }
 
@@ -74,11 +73,7 @@ namespace Webapi.Repositories
         {
             await Task.Run(() =>
             {
-                if (item is not null)
-                {
-                    var index = items.FindIndex(existingItem => existingItem.Id == item.Id);
-                    items[index] = item;
-                }
+                UpdateItem(item);
             });
         }
 
@@ -86,8 +81,7 @@ namespace Webapi.Repositories
         {
             await Task.Run(() =>
             {
-                var index = items.FindIndex(existingItem => existingItem.Id == id);
-                items.RemoveAt(index);
+                DeleteItem(id);
             });
         }
     }
