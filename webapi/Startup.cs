@@ -48,7 +48,7 @@ namespace Webapi
             // this is for Item in Sql Database.
 
             services.AddSingleton<IItemsRepository, SqlServerDbItemRepository>();
-
+            services.AddSingleton<ISecondRepo,SecondRepo>();
             // End of SQL database.
 
             // this is for Item Store in Mongo DB. database. 

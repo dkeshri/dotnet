@@ -10,10 +10,12 @@ namespace Webapi.Repositories
 {
     public class SqlServerDbItemRepository : IItemsRepository
     {
-        private IConfiguration Configuration { get; set; }
-        public SqlServerDbItemRepository(IConfiguration configuration)
+        private IConfiguration Configuration { get;}
+        private ISecondRepo secondRepo;
+        public SqlServerDbItemRepository(IConfiguration configuration, ISecondRepo secondRepo)
         {
             Configuration = configuration;
+            this.secondRepo = secondRepo;
         }
 
 
