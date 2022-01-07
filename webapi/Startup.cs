@@ -16,6 +16,7 @@ using MongoDB.Bson.Serialization;
 using MongoDB.Bson.Serialization.Serializers;
 using MongoDB.Driver;
 using Webapi.Extensions;
+using Webapi.Middleware;
 using Webapi.Repositories;
 using Webapi.Settings;
 
@@ -43,6 +44,7 @@ namespace Webapi
 
             // this is for Item in memory
             services.AddSingleton<IItemsRepository, InMemItemRepositories>();
+            
             // this is for Item Store in Mongo DB. database. 
             //services.AddSingleton<IItemsRepository, MongoDbItemsRepository>();
 
@@ -53,6 +55,10 @@ namespace Webapi
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "webapi", Version = "v1" });
             });
+
+            // register your middleware here.
+            services.AddTransient<CustomExceptionMiddleware>();
+            services.AddTransient<TestMiddleware>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -63,8 +69,23 @@ namespace Webapi
             {
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "webapi v1"));
+                app.UseDeveloperExceptionPage();
+            }else{
+
+                // for testing purpose.
+                app.UseSwagger();
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "webapi Production"));
             }
-            app.ConfigureExceptionHandler(env);
+
+            // we can do gloable exception handler by two way
+
+            // one by Extension Method and other by custom middleware
+            // Method 1.
+            //app.ConfigureExceptionHandler(env);
+            // Method 2
+            app.UseMiddleware<CustomExceptionMiddleware>();
+            
+            app.UseMiddleware<TestMiddleware>();
             app.UseHttpsRedirection();
 
             app.UseRouting();

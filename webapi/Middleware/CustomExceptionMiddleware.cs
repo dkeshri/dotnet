@@ -1,30 +1,49 @@
 using System;
 using System.Net;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Webapi.Entities;
-
-namespace Webapi.Middleware{
-    public class CustomExceptionMiddleware{
-        public readonly RequestDelegate _next;
-        public CustomExceptionMiddleware(RequestDelegate next){
-            _next = next;
+using Microsoft.Extensions.Hosting;
+namespace Webapi.Middleware
+{
+    public class CustomExceptionMiddleware : IMiddleware
+    {
+        private IWebHostEnvironment env;
+        public CustomExceptionMiddleware(IWebHostEnvironment env)
+        {
+            this.env = env;
         }
-        public async Task InvokeAsync(HttpContext context){
-            try{
-                await _next(context);
-            }catch(Exception){
-                await HandlerExceptionAsync(context);
+        public async Task InvokeAsync(HttpContext context, RequestDelegate next)
+        {
+            if (!env.IsDevelopment())
+            {
+                try
+                {
+                    await next(context);
+                }
+                catch (Exception)
+                {
+                    await HandlerExceptionAsync(context);
+                }
+            }else{
+                await next(context);
             }
+
         }
-        public Task HandlerExceptionAsync(HttpContext context){
+        public Task HandlerExceptionAsync(HttpContext context)
+        {
             context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
             context.Response.ContentType = "application/json";
 
-            return context.Response.WriteAsync(new ErrorDetails(){
+            return context.Response.WriteAsync(new ErrorDetails()
+            {
                 StatusCode = (int)HttpStatusCode.InternalServerError,
                 Message = "Internal Server Error"
             }.ToString());
         }
+
+
     }
 }
