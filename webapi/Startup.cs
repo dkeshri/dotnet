@@ -43,8 +43,14 @@ namespace Webapi
             });
 
             // this is for Item in memory
-            services.AddSingleton<IItemsRepository, InMemItemRepositories>();
+            //services.AddSingleton<IItemsRepository, InMemItemRepositories>();
             
+            // this is for Item in Sql Database.
+
+            services.AddSingleton<IItemsRepository, SqlServerDbItemRepository>();
+
+            // End of SQL database.
+
             // this is for Item Store in Mongo DB. database. 
             //services.AddSingleton<IItemsRepository, MongoDbItemsRepository>();
 
@@ -83,9 +89,9 @@ namespace Webapi
             // Method 1.
             //app.ConfigureExceptionHandler(env);
             // Method 2
-            app.UseMiddleware<CustomExceptionMiddleware>();
+            //app.UseMiddleware<CustomExceptionMiddleware>();
             
-            app.UseMiddleware<TestMiddleware>();
+            //app.UseMiddleware<TestMiddleware>();
             app.UseHttpsRedirection();
 
             app.UseRouting();
