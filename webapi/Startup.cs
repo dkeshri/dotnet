@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -65,6 +66,7 @@ namespace Webapi
             // register your middleware here.
             services.AddTransient<CustomExceptionMiddleware>();
             services.AddTransient<TestMiddleware>();
+            services.AddSingleton<CustomTest>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -89,9 +91,11 @@ namespace Webapi
             // Method 1.
             //app.ConfigureExceptionHandler(env);
             // Method 2
-            //app.UseMiddleware<CustomExceptionMiddleware>();
+            app.UseMiddleware<CustomExceptionMiddleware>();
             
-            //app.UseMiddleware<TestMiddleware>();
+            app.UseMiddleware<TestMiddleware>();
+
+            app.UseMiddleware<CustomTest>();
             app.UseHttpsRedirection();
 
             app.UseRouting();
