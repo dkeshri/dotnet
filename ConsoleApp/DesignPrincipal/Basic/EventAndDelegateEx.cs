@@ -35,7 +35,20 @@ namespace ConsoleApp.Basic
             videoEncoder.VideoEncoded += mailservice.onVideoEncoded;
             videoEncoder.VideoEncoded += messageService.sentMessage;
 
+            
+
             videoEncoder.Encode();
+
+
+            // we can Also remove the subscriber to the event too...
+            // by using -+ operator.
+            videoEncoder.VideoEncoded -=mailservice.onVideoEncoded;
+            Thread.Sleep(3000);
+            videoEncoder.Encode();
+
+
+
+            
 
         }
     }

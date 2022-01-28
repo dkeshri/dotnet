@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DesignPrincipal.Basic.Interface
 {
-    public interface IExecute
+    interface IExecute
     {
         void run();
     }
