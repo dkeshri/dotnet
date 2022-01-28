@@ -40,8 +40,8 @@ namespace ConsoleApp.Basic
             videoEncoder.Encode();
 
 
-            // we can Also remove the subscriber to the event too...
-            // by using -+ operator.
+            // we can Also remove the subscriber already subscribed to the event the event too...
+            // by using -= operator.
             videoEncoder.VideoEncoded -=mailservice.onVideoEncoded;
             Thread.Sleep(3000);
             videoEncoder.Encode();
