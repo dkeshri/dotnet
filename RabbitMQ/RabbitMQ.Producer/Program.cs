@@ -6,7 +6,7 @@ namespace RabbitMQ.Producer
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Producer Started!");
         }
     }
 }
