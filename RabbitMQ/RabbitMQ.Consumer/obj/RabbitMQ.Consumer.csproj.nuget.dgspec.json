@@ -1,0 +1,60 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Deepak_keshri\\ProjectLearn\\dotnet\\RabbitMQ\\RabbitMQ.Consumer\\RabbitMQ.Consumer.csproj": {}
+  },
+  "projects": {
+    "D:\\Deepak_keshri\\ProjectLearn\\dotnet\\RabbitMQ\\RabbitMQ.Consumer\\RabbitMQ.Consumer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Deepak_keshri\\ProjectLearn\\dotnet\\RabbitMQ\\RabbitMQ.Consumer\\RabbitMQ.Consumer.csproj",
+        "projectName": "RabbitMQ.Consumer",
+        "projectPath": "D:\\Deepak_keshri\\ProjectLearn\\dotnet\\RabbitMQ\\RabbitMQ.Consumer\\RabbitMQ.Consumer.csproj",
+        "packagesPath": "C:\\Users\\deepakkeshri\\.nuget\\packages\\",
+        "outputPath": "D:\\Deepak_keshri\\ProjectLearn\\dotnet\\RabbitMQ\\RabbitMQ.Consumer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\deepakkeshri\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

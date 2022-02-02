@@ -1,0 +1,16 @@
+D:\Deepak_keshri\ProjectLearn\dotnet\RabbitMQ\RabbitMQ.Producer\bin\Debug\net5.0\RabbitMQ.Producer.exe
+D:\Deepak_keshri\ProjectLearn\dotnet\RabbitMQ\RabbitMQ.Producer\bin\Debug\net5.0\RabbitMQ.Producer.deps.json
+D:\Deepak_keshri\ProjectLearn\dotnet\RabbitMQ\RabbitMQ.Producer\bin\Debug\net5.0\RabbitMQ.Producer.runtimeconfig.json
+D:\Deepak_keshri\ProjectLearn\dotnet\RabbitMQ\RabbitMQ.Producer\bin\Debug\net5.0\RabbitMQ.Producer.runtimeconfig.dev.json
+D:\Deepak_keshri\ProjectLearn\dotnet\RabbitMQ\RabbitMQ.Producer\bin\Debug\net5.0\RabbitMQ.Producer.dll
+D:\Deepak_keshri\ProjectLearn\dotnet\RabbitMQ\RabbitMQ.Producer\bin\Debug\net5.0\ref\RabbitMQ.Producer.dll
+D:\Deepak_keshri\ProjectLearn\dotnet\RabbitMQ\RabbitMQ.Producer\bin\Debug\net5.0\RabbitMQ.Producer.pdb
+D:\Deepak_keshri\ProjectLearn\dotnet\RabbitMQ\RabbitMQ.Producer\obj\Debug\net5.0\RabbitMQ.Producer.csproj.AssemblyReference.cache
+D:\Deepak_keshri\ProjectLearn\dotnet\RabbitMQ\RabbitMQ.Producer\obj\Debug\net5.0\RabbitMQ.Producer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Deepak_keshri\ProjectLearn\dotnet\RabbitMQ\RabbitMQ.Producer\obj\Debug\net5.0\RabbitMQ.Producer.AssemblyInfoInputs.cache
+D:\Deepak_keshri\ProjectLearn\dotnet\RabbitMQ\RabbitMQ.Producer\obj\Debug\net5.0\RabbitMQ.Producer.AssemblyInfo.cs
+D:\Deepak_keshri\ProjectLearn\dotnet\RabbitMQ\RabbitMQ.Producer\obj\Debug\net5.0\RabbitMQ.Producer.csproj.CoreCompileInputs.cache
+D:\Deepak_keshri\ProjectLearn\dotnet\RabbitMQ\RabbitMQ.Producer\obj\Debug\net5.0\RabbitMQ.Producer.dll
+D:\Deepak_keshri\ProjectLearn\dotnet\RabbitMQ\RabbitMQ.Producer\obj\Debug\net5.0\ref\RabbitMQ.Producer.dll
+D:\Deepak_keshri\ProjectLearn\dotnet\RabbitMQ\RabbitMQ.Producer\obj\Debug\net5.0\RabbitMQ.Producer.pdb
+D:\Deepak_keshri\ProjectLearn\dotnet\RabbitMQ\RabbitMQ.Producer\obj\Debug\net5.0\RabbitMQ.Producer.genruntimeconfig.cache
