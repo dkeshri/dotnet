@@ -16,7 +16,7 @@ namespace RabbitMQ.Producer
             );
             var message = new { Name = "Producer", Message = "Hello!" };
             var body = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(message));
-            channel.BasicPublish("", "demo-queue", null, body: body);
+            channel.BasicPublish("", "demo-Queue", null, body);
         }
     }
 }

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Deepak_keshri\\ProjectLearn\\dotnet\\RabbitMQ\\RabbitMQ.Producer\\RabbitMQ.Producer.csproj": {}
+    "/home/deepak/Deepak_keshri/Projects/dotnet/RabbitMQ/RabbitMQ.Producer/RabbitMQ.Producer.csproj": {}
   },
   "projects": {
-    "D:\\Deepak_keshri\\ProjectLearn\\dotnet\\RabbitMQ\\RabbitMQ.Producer\\RabbitMQ.Producer.csproj": {
+    "/home/deepak/Deepak_keshri/Projects/dotnet/RabbitMQ/RabbitMQ.Producer/RabbitMQ.Producer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Deepak_keshri\\ProjectLearn\\dotnet\\RabbitMQ\\RabbitMQ.Producer\\RabbitMQ.Producer.csproj",
+        "projectUniqueName": "/home/deepak/Deepak_keshri/Projects/dotnet/RabbitMQ/RabbitMQ.Producer/RabbitMQ.Producer.csproj",
         "projectName": "RabbitMQ.Producer",
-        "projectPath": "D:\\Deepak_keshri\\ProjectLearn\\dotnet\\RabbitMQ\\RabbitMQ.Producer\\RabbitMQ.Producer.csproj",
-        "packagesPath": "C:\\Users\\deepakkeshri\\.nuget\\packages\\",
-        "outputPath": "D:\\Deepak_keshri\\ProjectLearn\\dotnet\\RabbitMQ\\RabbitMQ.Producer\\obj\\",
+        "projectPath": "/home/deepak/Deepak_keshri/Projects/dotnet/RabbitMQ/RabbitMQ.Producer/RabbitMQ.Producer.csproj",
+        "packagesPath": "/home/deepak/.nuget/packages/",
+        "outputPath": "/home/deepak/Deepak_keshri/Projects/dotnet/RabbitMQ/RabbitMQ.Producer/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\deepakkeshri\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/deepak/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -62,7 +62,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.404/RuntimeIdentifierGraph.json"
         }
       }
     }
