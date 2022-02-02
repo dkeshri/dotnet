@@ -6,3 +6,11 @@
 
 /webapi/obj
 /webapi/bin
+
+#RabbitMQ
+
+/RabbitMQ/RabbitMQ.Consumer/obj
+/RabbitMQ/RabbitMQ.Consumer/bin
+
+/RabbitMQ/RabbitMQ.Producer/obj
+/RabbitMQ/RabbitMQ.Producer/bin
