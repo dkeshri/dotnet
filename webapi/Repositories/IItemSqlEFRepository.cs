@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using Webapi.Data;
 using Webapi.Entities;
 
@@ -27,7 +28,12 @@ namespace Webapi.Repositories
 
         public void DeleteItem(Guid id)
         {
-            throw new NotImplementedException();
+            Item item = context.Items.Find(id);
+            
+            context.Items.Remove(item);
+
+
+            context.SaveChanges();
         }
 
         public Task DeleteItemAsync(Guid id)
@@ -37,7 +43,8 @@ namespace Webapi.Repositories
 
         public Item GetItem(Guid id)
         {
-            throw new NotImplementedException();
+            Item item = context.Items.Find(id);
+            return item;
         }
 
         public Task<Item> GetItemAsync(Guid id)
