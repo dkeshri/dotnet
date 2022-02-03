@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -16,6 +17,7 @@ using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
 using MongoDB.Bson.Serialization.Serializers;
 using MongoDB.Driver;
+using Webapi.Data;
 using Webapi.Extensions;
 using Webapi.Middleware;
 using Webapi.Repositories;
@@ -43,12 +45,20 @@ namespace Webapi
                 return new MongoClient(settings.ConnectionString);
             });
 
+            services.AddDbContext<AppSQLDbContext>(
+                options => {
+                    options.UseSqlServer(Configuration.GetConnectionString("AppSQLDbEFConnection"));
+                },ServiceLifetime.Singleton
+            );
+            //services.AddTransient<AppSQLDbContext,AppSQLDbContext>();
             // this is for Item in memory
             //services.AddSingleton<IItemsRepository, InMemItemRepositories>();
             
             // this is for Item in Sql Database.
 
-            services.AddSingleton<IItemsRepository, SqlServerDbItemRepository>();
+            //services.AddSingleton<IItemsRepository, SqlServerDbItemRepository>();
+            services.AddSingleton<IItemsRepository, IItemSqlEFRepository>();
+
             services.AddSingleton<ISecondRepo,SecondRepo>();
             // End of SQL database.
 
