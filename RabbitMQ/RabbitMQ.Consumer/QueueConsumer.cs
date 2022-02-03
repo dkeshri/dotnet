@@ -23,7 +23,7 @@ namespace RabbitMQ.Consumer
 
                 Console.WriteLine(message);
             };
-            channel.BasicConsume("demo-queue",true,consumer);
+            channel.BasicConsume("demo-Queue",true,consumer);
         }
     }
 }
