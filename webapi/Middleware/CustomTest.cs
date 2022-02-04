@@ -8,9 +8,9 @@ namespace Webapi.Middleware{
     {
         public async Task InvokeAsync(HttpContext context, RequestDelegate next)
         {
-            Console.WriteLine("From custom middle ware ");
+            // Console.WriteLine("From custom middle ware ");
             await next(context);
-            Console.WriteLine("From custom middle ware in return");
+            // Console.WriteLine("From custom middle ware in return");
             
         }
     }

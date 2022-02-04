@@ -20,7 +20,7 @@ namespace Webapi.Middleware
             await next(context); // next is use to go to the next middle ware and we will wait till 
             // all the middleWare execute and return back to this method again 
             // after that below line will execute.
-            Console.Write("From TestMiddle ware");
+            // Console.Write("From TestMiddle ware");
         }
     }
 }

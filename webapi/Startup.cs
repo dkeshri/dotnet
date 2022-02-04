@@ -46,20 +46,30 @@ namespace Webapi
             });
 
             services.AddDbContext<AppSQLDbContext>(
-                options => {
+                options =>
+                {
                     options.UseSqlServer(Configuration.GetConnectionString("AppSQLDbEFConnection"));
-                },ServiceLifetime.Singleton
+                }, ServiceLifetime.Singleton
+            );
+            services.AddDbContext<AppOracleDbContext>(
+                options =>
+                {
+                    options.UseOracle(Configuration.GetConnectionString("AppOracleDbEFConnection"),
+                    b =>
+                        b.MigrationsAssembly(typeof(AppOracleDbContext).Assembly.FullName)
+                        .UseOracleSQLCompatibility("12"));
+                }
             );
             //services.AddTransient<AppSQLDbContext,AppSQLDbContext>();
             // this is for Item in memory
             //services.AddSingleton<IItemsRepository, InMemItemRepositories>();
-            
+
             // this is for Item in Sql Database.
 
             //services.AddSingleton<IItemsRepository, SqlServerDbItemRepository>();
             services.AddSingleton<IItemsRepository, IItemSqlEFRepository>();
 
-            services.AddSingleton<ISecondRepo,SecondRepo>();
+            services.AddSingleton<ISecondRepo, SecondRepo>();
             // End of SQL database.
 
             // this is for Item Store in Mongo DB. database. 
@@ -82,13 +92,15 @@ namespace Webapi
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            
+
             if (env.IsDevelopment())
             {
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "webapi v1"));
                 app.UseDeveloperExceptionPage();
-            }else{
+            }
+            else
+            {
 
                 // for testing purpose.
                 app.UseSwagger();
@@ -102,7 +114,7 @@ namespace Webapi
             //app.ConfigureExceptionHandler(env);
             // Method 2
             app.UseMiddleware<CustomExceptionMiddleware>();
-            
+
             app.UseMiddleware<TestMiddleware>();
 
             app.UseMiddleware<CustomTest>();
