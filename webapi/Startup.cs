@@ -60,7 +60,7 @@ namespace Webapi
                         .UseOracleSQLCompatibility("12"));
                 }
             );
-            //services.AddTransient<AppSQLDbContext,AppSQLDbContext>();
+
             // this is for Item in memory
             //services.AddSingleton<IItemsRepository, InMemItemRepositories>();
 
@@ -68,6 +68,7 @@ namespace Webapi
 
             //services.AddSingleton<IItemsRepository, SqlServerDbItemRepository>();
             services.AddSingleton<IItemsRepository, IItemSqlEFRepository>();
+            services.AddSingleton<IStudentRepository,StudentRepo>();
 
             services.AddSingleton<ISecondRepo, SecondRepo>();
             // End of SQL database.

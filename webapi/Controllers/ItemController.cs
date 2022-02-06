@@ -14,11 +14,9 @@ namespace Webapi.Controllers
     public class ItemsControllers : ControllerBase
     {
         private readonly IItemsRepository repository;
-        private readonly ISecondRepo secondRepo;
-        public ItemsControllers(IItemsRepository repository,ISecondRepo secondRepo)
+        public ItemsControllers(IItemsRepository repository)
         {
             this.repository = repository;
-            this.secondRepo = secondRepo;
         }
 
         // Get /items

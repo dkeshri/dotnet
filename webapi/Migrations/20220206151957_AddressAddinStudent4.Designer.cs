@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Webapi.Data;
 
 namespace webapi.Migrations
 {
     [DbContext(typeof(AppSQLDbContext))]
-    partial class AppSQLDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220206151957_AddressAddinStudent4")]
+    partial class AddressAddinStudent4
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -37,8 +39,8 @@ namespace webapi.Migrations
                     b.Property<string>("HNO")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Pincode")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Pincode")
+                        .HasColumnType("int");
 
                     b.Property<string>("State")
                         .HasColumnType("nvarchar(max)");
