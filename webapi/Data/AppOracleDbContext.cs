@@ -3,7 +3,7 @@ using Webapi.Entities;
 
 namespace Webapi.Data{
     public class AppOracleDbContext:DbContext{
-        public AppOracleDbContext(DbContextOptions options):base(options)
+        public AppOracleDbContext(DbContextOptions<AppOracleDbContext> options):base(options)
         {
             
         }

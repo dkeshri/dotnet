@@ -58,7 +58,7 @@ namespace Webapi
                     b =>
                         b.MigrationsAssembly(typeof(AppOracleDbContext).Assembly.FullName)
                         .UseOracleSQLCompatibility("12"));
-                }
+                },ServiceLifetime.Singleton
             );
 
             // this is for Item in memory
@@ -67,7 +67,7 @@ namespace Webapi
             // this is for Item in Sql Database.
 
             //services.AddSingleton<IItemsRepository, SqlServerDbItemRepository>();
-            services.AddSingleton<IItemsRepository, IItemSqlEFRepository>();
+            services.AddSingleton<IItemsRepository, OracleEFRepository>();
             services.AddSingleton<IStudentRepository,StudentRepo>();
 
             services.AddSingleton<ISecondRepo, SecondRepo>();
