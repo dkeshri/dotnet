@@ -47,7 +47,7 @@ namespace Webapi.Controllers
                 CreatedDate = DateTimeOffset.UtcNow
             };
             repository.CreateStudent(Student);
-            return CreatedAtAction(nameof(GetStudent), new { id = Student.StudentId });
+            return CreatedAtAction(nameof(GetStudent),new { id = student.StudentId },student);
         }
 
     }
