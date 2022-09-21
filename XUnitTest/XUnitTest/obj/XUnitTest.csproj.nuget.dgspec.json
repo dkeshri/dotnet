@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Deepak_keshri\\ProjectLearn\\dotnet\\ConsoleApp\\ConsoleApp.csproj": {}
+    "D:\\Deepak_keshri\\ProjectLearn\\dotnet\\XUnitTest\\XUnitTest\\XUnitTest.csproj": {}
   },
   "projects": {
-    "D:\\Deepak_keshri\\ProjectLearn\\dotnet\\ConsoleApp\\ConsoleApp.csproj": {
+    "D:\\Deepak_keshri\\ProjectLearn\\dotnet\\XUnitTest\\XUnitTest\\XUnitTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Deepak_keshri\\ProjectLearn\\dotnet\\ConsoleApp\\ConsoleApp.csproj",
-        "projectName": "ConsoleApp",
-        "projectPath": "D:\\Deepak_keshri\\ProjectLearn\\dotnet\\ConsoleApp\\ConsoleApp.csproj",
+        "projectUniqueName": "D:\\Deepak_keshri\\ProjectLearn\\dotnet\\XUnitTest\\XUnitTest\\XUnitTest.csproj",
+        "projectName": "XUnitTest",
+        "projectPath": "D:\\Deepak_keshri\\ProjectLearn\\dotnet\\XUnitTest\\XUnitTest\\XUnitTest.csproj",
         "packagesPath": "C:\\Users\\deepakkeshri\\.nuget\\packages\\",
-        "outputPath": "D:\\Deepak_keshri\\ProjectLearn\\dotnet\\ConsoleApp\\obj\\",
+        "outputPath": "D:\\Deepak_keshri\\ProjectLearn\\dotnet\\XUnitTest\\XUnitTest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\deepakkeshri\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -37,20 +37,6 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "dependencies": {
-            "Newtonsoft.Json": {
-              "target": "Package",
-              "version": "[13.0.1, )"
-            },
-            "xunit": {
-              "target": "Package",
-              "version": "[2.4.1, )"
-            },
-            "xunit.runner.visualstudio": {
-              "target": "Package",
-              "version": "[2.4.3, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
