@@ -61,6 +61,8 @@ namespace Webapi
                 },ServiceLifetime.Singleton
             );
 
+
+            // Add Authentication 
             // this is for Item in memory
             //services.AddSingleton<IItemsRepository, InMemItemRepositories>();
 

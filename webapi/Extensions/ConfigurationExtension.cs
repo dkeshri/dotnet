@@ -8,7 +8,8 @@ namespace Webapi.Extensions
         {
            return configuration.GetSection("Token:Secret").Value;
         }
-
-        public 
+        public static string getTokenExpireTime(this IConfiguration configuration){
+            return configuration.GetSection("Token:TokenExpireInSec").Value;
+        }
     }
 }
