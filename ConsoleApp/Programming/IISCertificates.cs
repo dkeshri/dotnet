@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using DesignPrincipal.Basic.Interface;
 
 namespace ConsoleApp.Programming{
@@ -40,7 +42,7 @@ namespace ConsoleApp.Programming{
         public void run()
         {
             //fibonacciSerise(8);
-            SeriseOfArmstrongNumber(1000);
+            //SeriseOfArmstrongNumber(1000);
         }
     }
 }
